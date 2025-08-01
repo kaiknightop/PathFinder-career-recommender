@@ -28,8 +28,32 @@ Screenshots
 ![Home Page](career_app/static/screenshots/home.png)  
 Landing page for exploring career options
 
-![Results Page](static/screenshots/results.png)  
-Personalized recommendations section
 
+![Home Page](career_app/static/screenshots/careerorjobsearch.png)  
+Career or Job Seatch Page
+
+
+![Home Page](career_app/static/screenshots/roadmap_generator.png)  
+Roadmap Geneartor Page
+
+
+![Home Page](career_app/static/screenshots/roadmap_result.png)  
+Roadmap Result
+
+
+![Home Page](career_app/static/screenshots/about.png)  
+About Page
+
+
+![Home Page](career_app/static/screenshots/linkedinandindeed.png)  
+Searched Jobs/Career Application (third party)
+
+
+![Home Page](career_app/static/screenshots/Mobileview1.png)  
+Mobile view 
+
+
+![Home Page](career_app/static/screenshots/Mobileview2.png)  
+Mobile view
 
 
