@@ -49,11 +49,11 @@ About Page
 Searched Jobs/Career Application (third party)
 
 
-![Home Page](career_app/static/screenshots/Mobileview1.png)  
+![Home Page](career_app/static/screenshots/Mobileview1.jpg)  
 Mobile view 
 
 
-![Home Page](career_app/static/screenshots/Mobileview2.png)  
+![Home Page](career_app/static/screenshots/Mobileview2.jpg)  
 Mobile view
 
 
