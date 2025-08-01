@@ -1,27 +1,23 @@
-# Improved Career Recommender System- (Will Upload soon)
-The Career Recommender System is a personalized platform designed to help users discover the best career paths based on their skills, interests, 
-and learning preferences. Whether you're a student, job seeker, or professional looking to pivot, this system gives intelligent suggestions to help 
-you plan your career path with confidence.
+# Pathfinder: Career Roadmap & Search Recommender
 
-Features
+A smart web-based platform that helps users discover potential career paths, visualize roadmaps, and explore relevant job roles based on their interests or skills. Whether you're a student, a job seeker, or someone looking to pivot careers, Pathfinder helps you make informed decisions with AI-assisted insights.
 
-- Smart Career Path Recommendations
-  Get personalized career suggestions based on your input.
-- Learning Resource Suggestions
-  Get matched with books, videos, and learning materials aligned with your goals.
-- AI-powered Matching
-  Built with content-based filtering and Pinecone vector search for relevance.
-- Responsive UI
-  Fully optimized for desktop and mobile devices.
-- Authentication 
-  User registration and login system powered by Django.
+## 🚀 Features
 
-Technologies Used
+- Career Path Suggestions: Input your interests or skills, and receive AI-driven suggestions for relevant career paths.
+- Dynamic Roadmap Generator: Visual representation of the skills, tools, and milestones needed to pursue a specific career.
+- Live Job Search Integration: Real-time job opportunities fetched using external APIs like RapidAPI (Google Jobs).
+- Responsive Interface: Clean and modern UI built for desktop and mobile users.
+- Modular Design: Easily extendable for adding more paths, features, or domains.
 
-- Backend: Django + PostgreSQL  
-- Frontend: HTML, CSS (custom)  
-- APIs**: Open Library API, YouTube API, Pinecone  
+## 🛠 Tech Stack
+
+- Backend: Django (Python)
+- Frontend: HTML, CSS (custom), JavaScript
+- Database: PostgreSQL
+- Job API: RapidAPI (Google Jobs integration)
 - Deployment: Render
+- Version Control: Git & GitHub
 
 Screenshots
 
