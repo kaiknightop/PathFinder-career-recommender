@@ -25,7 +25,7 @@ Technologies Used
 
 Screenshots
 
-![Home Page](static/screenshots/home.png)  
+![Home Page](career_app/static/screenshots/home.png)  
 Landing page for exploring career options
 
 ![Results Page](static/screenshots/results.png)  
