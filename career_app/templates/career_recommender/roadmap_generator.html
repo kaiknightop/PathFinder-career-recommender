@@ -1,0 +1,80 @@
+{% extends 'career_recommender/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 30px 40px;
+">
+    <h1 style="text-align: center; color: #222; margin-bottom: 30px;">
+        🔍 Career Roadmap Generator
+    </h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="career_goal" style="font-weight: bold; display: block; margin: 15px 0 5px;">
+            Your Dream Role:
+        </label>
+        <input type="text" id="career_goal" name="career_goal" placeholder="e.g. Data Scientist" required style="
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        ">
+
+        <label for="skills" style="font-weight: bold; display: block; margin: 15px 0 5px;">
+            Your Current Skills:
+        </label>
+        <textarea id="skills" name="skills" rows="5" placeholder="e.g. Python, Excel, SQL..." required style="
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        "></textarea>
+
+        <button type="submit" style="
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        ">
+            Generate Roadmap
+        </button>
+    </form>
+
+    {% if roadmap %}
+    <div class="roadmap" style="
+        background-color: #f0f4ff;
+        border-left: 6px solid #007bff;
+        padding: 20px;
+        margin-top: 30px;
+        border-radius: 10px;
+        white-space: pre-line;
+        font-size: 1rem;
+        color: #333;
+    ">
+        {{ roadmap }}
+    </div>
+    {% endif %}
+</div>
+
+<style>
+    @media screen and (max-width: 768px) {
+        .container {
+            margin: 20px !important;
+            padding: 20px !important;
+        }
+    }
+</style>
+{% endblock %}

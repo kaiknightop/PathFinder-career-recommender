@@ -1,0 +1,53 @@
+{% extends 'career_recommender/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'career_app/roadmap_generator.css' %}">
+
+<!-- 🧠 Hero Landing Section -->
+<section class="landing-hero">
+  <div class="container text-center">
+    <h1 class="landing-title">Discover Your Dream Career Path</h1>
+    <p class="landing-subtitle">Not sure how to begin your journey? We'll guide you with a personalized learning roadmap based on your current skills and goals.</p>
+    <a href="#generator" class="btn-cta">Start Generating</a>
+  </div>
+</section>
+
+<!-- 🧾 Generator Section -->
+<section class="roadmap-form-section" id="generator">
+  <div class="container">
+    <h2 class="section-title">Career Roadmap Generator</h2>
+    <form method="post" id="roadmap-form" class="roadmap-form">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="career_goal">Career Goal:</label>
+        <input type="text" id="career_goal" name="career_goal" placeholder="e.g. Data Scientist" required>
+      </div>
+
+      <div class="form-group">
+        <label for="skills">Your Current Skills:</label>
+        <textarea id="skills" name="skills" rows="4" placeholder="List your current skills like Python, SQL, Excel..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-generate">Generate Roadmap</button>
+    </form>
+  </div>
+</section>
+
+<!-- 📈 Result Section -->
+<section class="roadmap-result-section">
+  <div class="container">
+    <h2 class="result-title">Your Personalized Roadmap</h2>
+    <div id="roadmap-result" class="roadmap-result-box">
+      {% if roadmap %}
+        {% for line in roadmap.splitlines %}
+          <p class="roadmap-line">{{ line }}</p>
+        {% endfor %}
+      {% else %}
+        <p class="placeholder-text">Your roadmap will appear here after submission.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

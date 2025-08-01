@@ -1,0 +1,143 @@
+/* === CAREER SEARCH STYLES === */
+
+.career-search-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+}
+
+.search-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Search form */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 12px 18px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 60%;
+    min-width: 250px;
+}
+
+.search-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #00C9A7;
+}
+
+/* Search results list */
+.search-results {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-result-card {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.job-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.employer-name {
+    font-size: 16px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.job-location {
+    font-size: 15px;
+    color: #666;
+    margin: 8px 0;
+}
+
+.apply-link {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #6C63FF;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.apply-link:hover {
+    background-color: #00C9A7;
+}
+
+/* No results */
+.no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    padding: 40px 0;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagination-link {
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #f7f7f7;
+    transition: all 0.2s ease;
+}
+
+.pagination-link:hover {
+    background-color: #6C63FF;
+    color: white;
+    border-color: #6C63FF;
+}
+
+.pagination-text {
+    font-size: 16px;
+    color: #444;
+    font-weight: 500;
+}

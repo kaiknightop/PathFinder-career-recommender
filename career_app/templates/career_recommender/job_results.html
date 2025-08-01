@@ -1,0 +1,48 @@
+{% extends 'career_recommender/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'career_app/job_results.css' %}">
+
+<div class="career-search-container">
+
+  <h1 class="search-heading">Career Search Results</h1>
+
+  <!-- SEARCH BAR -->
+  <form method="get" action="{% url 'job_search' %}" class="search-form">
+    <input type="text" name="query" value="{{ query }}" placeholder="Search careers" class="search-input">
+    <button type="submit" class="search-button">Search</button>
+  </form>
+
+  <!-- RESULTS LIST -->
+  <ul class="search-results">
+    {% for job in page_obj %}
+      <li class="search-result-card">
+        <p class="job-title">{{ job.job_title }}</p>
+        <p class="employer-name">{{ job.employer_name }}</p>
+        <p class="job-location">Location: {{ job.job_city }}, {{ job.job_country }}</p>
+        <a href="{{ job.job_apply_link }}" target="_blank" class="apply-link">Apply</a>
+      </li>
+    {% empty %}
+      <li class="no-results">No careers found for "<strong>{{ query }}</strong>".</li>
+    {% endfor %}
+  </ul>
+
+  <!-- PAGINATION -->
+  {% if page_obj.has_other_pages %}
+    <div class="pagination">
+      {% if page_obj.has_previous %}
+        <a href="?query={{ query }}&page=1" class="pagination-link">« First</a>
+        <a href="?query={{ query }}&page={{ page_obj.previous_page_number }}" class="pagination-link">‹ Prev</a>
+      {% endif %}
+
+      <span class="pagination-text">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+
+      {% if page_obj.has_next %}
+        <a href="?query={{ query }}&page={{ page_obj.next_page_number }}" class="pagination-link">Next ›</a>
+        <a href="?query={{ query }}&page={{ page_obj.paginator.num_pages }}" class="pagination-link">Last »</a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

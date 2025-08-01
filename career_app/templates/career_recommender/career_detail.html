@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ career.title }} - Career Details</title>
+  <link rel="stylesheet" href="{% static 'career_app/career_detail.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="icon-section">
+        <div class="icon-circle">
+          <i class="{{ career.icon_class }}"></i>
+        </div>
+        <h1>{{ career.title }}</h1>
+        <p class="description">{{ career.description }}</p>
+      </div>
+
+      <div class="details">
+        {% if career.required_degree %}
+        <p><strong>Required Degree:</strong> {{ career.required_degree }}</p>
+        {% endif %}
+
+        {% if career.required_skills %}
+        <p><strong>Required Skills:</strong> {{ career.required_skills }}</p>
+        {% endif %}
+
+        {% if career.certifications %}
+        <p><strong>Certifications:</strong> {{ career.certifications }}</p>
+        {% endif %}
+
+        {% if career.average_salary %}
+        <p><strong>Average Salary:</strong> {{ career.average_salary }}</p>
+        {% endif %}
+
+        {% if career.growth_potential %}
+        <p><strong>Growth Potential:</strong> {{ career.growth_potential }}</p>
+        {% endif %}
+      </div>
+
+      <div class="back-button">
+        <a href="{% url 'career_paths_list' %}">Back to Career List</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+{% extends 'career_recommender/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="about-hero">
+  <h1>About Career Pathfinder</h1>
+  <p>Your personalized roadmap to a meaningful career journey.</p>
+</section>
+
+<section class="about-section">
+  <h2>Our Mission</h2>
+  <p>We empower individuals to make informed career decisions through AI-powered recommendations and easy-to-follow roadmaps based on real-world opportunities.</p>
+</section>
+
+<section class="about-section">
+  <h2>What We Offer</h2>
+  <ul>
+    <li>🔍 Personalized job and career path suggestions</li>
+    <li>📈 Roadmap generator tailored to your goals</li>
+    <li>🎯 Live job search with intelligent filters</li>
+    <li>📚 Skill-based recommendations from real data</li>
+  </ul>
+</section>
+
+<section class="about-section">
+  <h2>Why Pathfinder?</h2>
+  <p>We believe job hunting and career planning should be clear, strategic, and motivating, not overwhelming. Pathfinder blends technology with guidance to give you clarity in every step.</p>
+</section>
+
+<section class="about-section cta">
+  <h2>Ready to take the next step?</h2>
+  <a href="{% url 'generate_roadmap' %}" class="cta-button">Generate Your Career Roadmap</a>
+</section>
+{% endblock %}

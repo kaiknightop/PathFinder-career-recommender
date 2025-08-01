@@ -1,0 +1,208 @@
+/* Reset & Fonts */
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8f9fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Utility */
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Hero Section */
+.hero-roadmap {
+  background: linear-gradient(135deg, #6c63ff, #7f90ff);
+  padding: 4rem 1rem;
+  color: white;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-title .highlight {
+  color: #ffe082;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Form Section */
+.roadmap-form-section {
+  margin-top: 2rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.roadmap-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.roadmap-form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-form input,
+.roadmap-form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.roadmap-form input:focus,
+.roadmap-form textarea:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* Button */
+.btn-generate {
+  background-color: #6c63ff;
+  color: white;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-generate:hover {
+  background-color: #00C9A7
+}
+
+/* Results Section */
+.roadmap-result-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.roadmap-result-section h2 {
+  margin-bottom: 1.5rem;
+  color: #6c63ff;
+  font-size: 1.5rem;
+}
+
+.roadmap-result pre {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.placeholder-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #64748b;
+  padding: 20px 10px;
+  background: #e2e8f0;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .roadmap-form-section,
+  .roadmap-result-section {
+    padding: 1.5rem;
+  }
+}
+
+.roadmap-line {
+  margin-bottom: 12px;
+  border-left: 4px solid #3b82f6;
+  padding-left: 15px;
+  background-color: #f1f5f9;
+  border-radius: 6px;
+}
+
+.roadmap-result-box {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 30px 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #334155;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.roadmap-result-section {
+  background: #f8f9fb;
+  padding: 60px 20px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.result-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.landing-hero {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #1e293b, #0f172a);
+  color: #fff;
+  text-align: center;
+}
+.landing-title {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+.landing-subtitle {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+.btn-cta {
+  background-color: #4f46e5;
+  padding: 12px 25px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn-cta:hover {
+  background-color: #00C9A7;
+}
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}

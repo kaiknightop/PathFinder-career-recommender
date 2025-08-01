@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 40px 10px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.icon-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #e6f0ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto;
+}
+
+.icon-circle i {
+  font-size: 32px;
+  color: #3366cc;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+}
+
+.details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.back-button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.back-button a {
+  text-decoration: none;
+  background-color: #3366cc;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button a:hover {
+  background-color: #00C9A7;
+}

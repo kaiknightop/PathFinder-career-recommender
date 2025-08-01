@@ -1,0 +1,223 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6C63FF, #00C9A7);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.auth-container {
+    background-color: white;
+    padding: 40px 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 420px;
+    margin-top: 60px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #6C63FF;
+    box-shadow: 0 0 8px rgba(108,99,255,0.2);
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #00C9A7;
+    transform: translateY(-2px);
+}
+
+p.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.auth-link {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.auth-link a {
+    color: #6C63FF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* === Responsive Fix ONLY === */
+@media screen and (max-width: 480px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(135deg, #6C63FF, #00C9A7);
+    }
+
+    .auth-container {
+        width: 90%;
+        max-width: 360px;
+        margin: 0;
+        padding: 25px 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .auth-container h2 {
+        font-size: 20px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .auth-link {
+        font-size: 13px;
+    }
+}
+
+
+
+/* Medium phones (481px–767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .auth-container {
+        margin: 100px auto !important;
+        padding: 30px 20px !important;
+        width: 85% !important;
+    }
+
+    .auth-container h2 {
+        font-size: 24px !important;
+    }
+
+    .auth-container input,
+    .auth-container button {
+        font-size: 15px !important;
+    }
+}
+
+/* Tablets (768px–1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .auth-container {
+        margin: 120px auto !important;
+        max-width: 500px !important;
+        padding: 40px 30px !important;
+    }
+
+    .auth-container h2 {
+        font-size: 26px !important;
+    }
+
+    .auth-container input,
+    .auth-container button {
+        font-size: 16px !important;
+    }
+}
+
+
+form p {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+
+form ul li {
+    color: red;
+    font-size: 13px;
+}
+
+/* Adjust help text styling if any */
+form span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #555;
+}
