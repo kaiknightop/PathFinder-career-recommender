@@ -1,7 +1,7 @@
 {% extends 'career_recommender/base.html' %}
 {% load static %}
-
 {% block content %}
+<link rel="stylesheet" href="{% static 'career_app/about.css' %}" />
 <section class="about-hero">
   <h1>About Career Pathfinder</h1>
   <p>Your personalized roadmap to a meaningful career journey.</p>
@@ -9,7 +9,11 @@
 
 <section class="about-section">
   <h2>Our Mission</h2>
-  <p>We empower individuals to make informed career decisions through AI-powered recommendations and easy-to-follow roadmaps based on real-world opportunities.</p>
+  <p>
+    We empower individuals to make informed career decisions through AI-powered
+    recommendations and easy-to-follow roadmaps based on real-world
+    opportunities.
+  </p>
 </section>
 
 <section class="about-section">
@@ -24,11 +28,17 @@
 
 <section class="about-section">
   <h2>Why Pathfinder?</h2>
-  <p>We believe job hunting and career planning should be clear, strategic, and motivating, not overwhelming. Pathfinder blends technology with guidance to give you clarity in every step.</p>
+  <p>
+    We believe job hunting and career planning should be clear, strategic, and
+    motivating, not overwhelming. Pathfinder blends technology with guidance to
+    give you clarity in every step.
+  </p>
 </section>
 
 <section class="about-section cta">
   <h2>Ready to take the next step?</h2>
-  <a href="{% url 'generate_roadmap' %}" class="cta-button">Generate Your Career Roadmap</a>
+  <a href="{% url 'generate_roadmap' %}" class="cta-button"
+    >Generate Your Career Roadmap</a
+  >
 </section>
 {% endblock %}

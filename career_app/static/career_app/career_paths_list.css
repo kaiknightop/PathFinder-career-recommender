@@ -1,216 +1,155 @@
-/* === GENERAL STYLES === */
+/* === GENERAL === */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    background-color: #f8f9fc;
-    margin: 0;
-    padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fc;
+  color: #333;
 }
 
-h1 {
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 40px;
-    margin-bottom: 20px;
+/* === HERO SECTION === */
+.landing-hero {
+  background: linear-gradient(135deg, #6c63ff, #00c9a7);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-h2 {
-    font-size: 28px;
-    color: #444;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
+.landing-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
-.hero-subtitle {
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-
-/* === HERO HEADER === */
-.header {
-    background-color: #6C63FF;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.header h1 .second-text {
-    color: #00C9A7;
-}
-
-.header p {
-    font-size: 18px;
-    margin-top: 15px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-}
-
-
-/* === SEARCH FORM === */
-form {
-    text-align: center;
-    margin: 40px 0;
-}
-
-form p {
-    display: inline-block;
-    margin: 0;
-}
-
-form input[type="text"],
-form select {
-    padding: 10px;
-    width: 300px;
-    max-width: 90%;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-form button {
-    background-color: #6C63FF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #00C9A7;
-}
-
-
-/* === CAREER LIST === */
-.career-paths {
-    margin: 60px auto 20px auto;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-}
-
-ul li {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    color: #555;
-}
-
-
-/* === CAREER CARDS === */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: 60px auto;
-}
-
-.career-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.career-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.career-card .icon {
-    width: 50px;
-    height: 50px;
-    margin: 0 auto 20px;
-    background-color: #e0e7ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.career-card h3 {
-    font-size: 20px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.career-card p {
-    text-align: center;
-    color: #555;
-    font-size: 15px;
-    margin-bottom: 15px;
-}
-
-.career-card a {
-    margin-top: auto;
-    text-align: center;
-    display: block;
-    background-color: #6C63FF;
-    color: white;
-    padding: 10px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.career-card a:hover {
-    background-color: #00C9A7;
-}
-
-
-/* === CTA SECTION === */
-.cta-section {
-    background-color: #fff;
-    padding: 80px 20px;
-    text-align: center;
-    border-top: 1px solid #eee;
-}
-
-.cta-title {
-    font-size: 26px;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.cta-text {
-    color: #555;
-    font-size: 17px;
-    margin-bottom: 25px;
+.landing-subtitle {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
 }
 
 .btn-cta {
-    background-color: #00C9A7;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  background-color: #ffffff;
+  color: #6c63ff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-cta:hover {
+  background-color: #00c9a7;
+  color: white;
 }
 
-.btn-cta:hover {
-    background-color: #00C9A7;
+/* === FORM SECTION === */
+.roadmap-form-section {
+  padding: 60px 20px;
+}
+
+.roadmap-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.roadmap-form .form-group {
+  margin-bottom: 20px;
+}
+
+.roadmap-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.roadmap-form input,
+.roadmap-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.btn-generate {
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-generate:hover {
+  background-color: #00c9a7;
+}
+
+/* === RESULT SECTION === */
+.roadmap-result-section {
+  background: #f8f9fb;
+  padding: 60px 20px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.result-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.roadmap-result-box {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 30px 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #334155;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Roadmap entries */
+.roadmap-line {
+  margin-bottom: 15px;
+  padding: 14px 18px;
+  border-left: 4px solid #3b82f6;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.roadmap-line:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Placeholder */
+.placeholder-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #64748b;
+  padding: 20px 10px;
+  background: #e2e8f0;
+  border-radius: 8px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .landing-title {
+    font-size: 2.6rem;
+  }
+  .landing-subtitle {
+    font-size: 1.1rem;
+  }
+  .btn-cta {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
 }

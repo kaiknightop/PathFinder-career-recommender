@@ -1,14 +1,16 @@
-{% extends 'career_recommender/base.html' %}
-{% load static %}
-
+{% extends 'career_recommender/base.html' %} 
+{% load static %} 
 {% block content %}
-<link rel="stylesheet" href="{% static 'career_app/roadmap_generator.css' %}">
+<link rel="stylesheet" href="{% static 'career_app/career_paths_list.css' %}" />
 
 <!-- 🧠 Hero Landing Section -->
 <section class="landing-hero">
-  <div class="container text-center">
+  <div class="container">
     <h1 class="landing-title">Discover Your Dream Career Path</h1>
-    <p class="landing-subtitle">Not sure how to begin your journey? We'll guide you with a personalized learning roadmap based on your current skills and goals.</p>
+    <p class="landing-subtitle">
+      Not sure how to begin your journey? We'll guide you with a personalized
+      learning roadmap based on your current skills and goals.
+    </p>
     <a href="#generator" class="btn-cta">Start Generating</a>
   </div>
 </section>
@@ -21,12 +23,24 @@
       {% csrf_token %}
       <div class="form-group">
         <label for="career_goal">Career Goal:</label>
-        <input type="text" id="career_goal" name="career_goal" placeholder="e.g. Data Scientist" required>
+        <input
+          type="text"
+          id="career_goal"
+          name="career_goal"
+          placeholder="e.g. Data Scientist"
+          required
+        />
       </div>
 
       <div class="form-group">
         <label for="skills">Your Current Skills:</label>
-        <textarea id="skills" name="skills" rows="4" placeholder="List your current skills like Python, SQL, Excel..." required></textarea>
+        <textarea
+          id="skills"
+          name="skills"
+          rows="4"
+          placeholder="List your current skills like Python, SQL, Excel..."
+          required
+        ></textarea>
       </div>
 
       <button type="submit" class="btn-generate">Generate Roadmap</button>
@@ -40,14 +54,21 @@
     <h2 class="result-title">Your Personalized Roadmap</h2>
     <div id="roadmap-result" class="roadmap-result-box">
       {% if roadmap %}
-        {% for line in roadmap.splitlines %}
-          <p class="roadmap-line">{{ line }}</p>
-        {% endfor %}
+        <div class="roadmap-list">
+          {% for line in roadmap.splitlines %}
+            {% if line.strip %}
+              <div class="roadmap-line">{{ line }}</div>
+            {% endif %}
+          {% endfor %}
+        </div>
       {% else %}
-        <p class="placeholder-text">Your roadmap will appear here after submission.</p>
+        <p class="placeholder-text">
+          Your roadmap will appear here after submission.
+        </p>
       {% endif %}
     </div>
   </div>
 </section>
+
 
 {% endblock content %}

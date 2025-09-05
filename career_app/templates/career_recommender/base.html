@@ -1,38 +1,90 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Career Recommender</title>
-  <link rel="stylesheet" href="{% static 'career_app/base.css' %}">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Recommender</title>
+    <link rel="stylesheet" href="{% static 'career_app/base.css' %}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="{% url 'career_paths_list' %}" class="logo-link">
+          <img
+            class="logo"
+            src="{% static 'images/logo.png' %}"
+            alt="Career Recommender logo"
+          />
+        </a>
+      </div>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo-container">
-      <img class="logo" src="{% static 'images/logo.png' %}" alt="Logo">
-    </div>
+      <div class="nav-right">
+        <!-- Desktop links (only visible on larger screens) -->
+        <div class="desktop-nav">
+          <a href="{% url 'career_paths_list' %}">Home</a>
+          <a href="{% url 'job_search' %}">Career Search</a>
+          <a href="{% url 'generate_roadmap' %}">Roadmap Generator</a>
+          <a href="{% url 'about' %}">About</a>
+        </div>
 
-    <div class="nav-links">
-      <a href="{% url 'career_paths_list' %}">Home</a>
-      <a href="{% url 'job_search' %}">Career Search</a>
-      <a href="{% url 'generate_roadmap' %}">Roadmap Generator</a>
-      <a href="{% url 'about' %}">About</a> <!-- Replace with actual URL later if you have a page -->
-    </div>
-  </nav>
+        <!-- Hamburger (only visible on smaller screens) -->
+        <button id="hamburgerBtn" class="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
 
-  <!-- Main Content -->
-  <main class="main-content">
-    {% block content %}
-    {% endblock %}
-  </main>
+    <!-- Mobile sidebar -->
+    <aside id="mobileSidebar" class="mobile-sidebar">
+      <button id="closeSidebarBtn" class="close-btn" aria-label="Close menu">
+        &times;
+      </button>
 
-  <!-- Footer -->
-  <footer class="footer">
-    &copy; 2025 Career Recommender
-  </footer>
+      <nav class="mobile-nav">
+        <a href="{% url 'career_paths_list' %}">Home</a>
+        <a href="{% url 'job_search' %}">Career Search</a>
+        <a href="{% url 'generate_roadmap' %}">Roadmap Generator</a>
+        <a href="{% url 'about' %}">About</a>
+      </nav>
+    </aside>
 
-</body>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">{% block content %}{% endblock %}</main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      &copy; 2025 Career Recommender | Developed by Okpandu Dennis | Empowering
+      Your Career Journey.
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburgerBtn");
+      const sidebar = document.getElementById("mobileSidebar");
+      const closeBtn = document.getElementById("closeSidebarBtn");
+      const overlay = document.getElementById("overlay");
+
+      function openSidebar() {
+        sidebar.classList.add("open");
+        overlay.classList.add("show");
+        document.body.classList.add("no-scroll");
+      }
+
+      function closeSidebar() {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("show");
+        document.body.classList.remove("no-scroll");
+      }
+
+      hamburger.addEventListener("click", openSidebar);
+      closeBtn.addEventListener("click", closeSidebar);
+      overlay.addEventListener("click", closeSidebar);
+    </script>
+  </body>
 </html>
